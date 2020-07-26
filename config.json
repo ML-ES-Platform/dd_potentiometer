@@ -1,0 +1,25 @@
+{
+    "Components":{
+        "dd_potentiometer": {
+            "Name": "dd_potentiometer",
+            "git": "https://github.com/ML-ES-Platform/dd_potentiometer.git",
+            "Path": "ESW/dd_pot/",
+            "Groups": {
+                "dd_pot": {
+                    "Name": "dd_pot",
+                    "NameSpace": "dd_pot",
+                    "Multiplicity": "0-*",
+                    "Push": [],
+                    "Pull": ["POT_GetPosition"],
+                    "Dependencies" : ["mcal_adc", "ext_adc"],
+                    "Channels": {
+                        "Multiplicity": "1-*",
+                        "NameSpace": "DD_POT"
+                    },
+                    "Defines": {
+                    }
+                }
+            }
+        }
+    }
+}
